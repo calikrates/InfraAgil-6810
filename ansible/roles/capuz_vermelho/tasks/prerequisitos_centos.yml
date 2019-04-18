@@ -1,0 +1,11 @@
+- name: Stop Apache
+  systemd:
+    name: httpd
+    state: stopped
+  when: ansible_os_family|lower == "redhat"
+
+- name: Remove Apache
+  package:
+    name: httpd
+    state: absent
+  when: ansible_os_family|lower == "redhat"

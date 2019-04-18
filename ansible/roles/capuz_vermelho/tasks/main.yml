@@ -1,0 +1,6 @@
+---
+# tasks file for capuz_vermelho
+- include: prerequisitos_centos.yml
+- include: prerequisitos_debian.yml
+- include: install_nginx.yml
+- include: deploy.yml 

@@ -1,0 +1,9 @@
+- name: Install NGNIX
+  package:
+    name: nginx
+    state: present
+
+- name: Iniciando NGINX
+  systemd:
+    name: nginx
+    state: restarted

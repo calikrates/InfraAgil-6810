@@ -1,0 +1,8 @@
+- name: Install Puppet via RPM
+  command: rpm -Uvh /tmp/puppet6-release-el-7.noarch.rpm 
+  when: ansible_os_family == "RedHat"
+  
+- name: Install Puppet Agent
+  yum:
+    name: puppet-agent
+    state: present
